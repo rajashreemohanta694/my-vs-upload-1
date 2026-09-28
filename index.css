@@ -1,0 +1,53 @@
+:root {
+  --ink: #0A0E14;
+  --panel: #10151D;
+  --panel-2: #151C27;
+  --border: #212B38;
+  --border-soft: #1A222D;
+  --text: #E8EDF4;
+  --text-dim: #8B97AA;
+  --text-faint: #576273;
+
+  --safe: #3FD0C9;
+  --low: #6FB1F0;
+  --medium: #F0A63A;
+  --high: #F0763A;
+  --critical: #E5484D;
+
+  --accent: #3FD0C9;
+
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 1fr; }
+}
